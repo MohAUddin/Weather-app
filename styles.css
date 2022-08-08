@@ -42,9 +42,14 @@ header i {
 .info__part .info__part--para{
     text-align: center;
     font-size: 16px;
-    background: #ff6961 ;
     padding: 12px 10px;
     border-radius: 7px;
+}
+
+.info__part--para.error{
+    background: #ff6961 ;
+    color: #f8d7da;
+    border: 1px solid #f5c6cb;
 }
 
 .info__part :where(input, button){
