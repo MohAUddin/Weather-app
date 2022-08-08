@@ -4,3 +4,27 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #00bfff;
+}
+
+.wrapper {
+    background-color: #fff;
+    width: 400px;
+    border-radius: 7px;
+}
+
+.wrapper header {
+    font-size: 21px;
+    color: #00bfff;
+    font-weight: 500px;
+    padding: 16px 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #bfbfbf;
+}
