@@ -35,11 +35,13 @@ header i {
     margin-right: 8px;
 }
 
-.info__part {
+.wrapper .info__part {
+    display: none;
     margin: 20px 25px 30px;
 }
 
 .info__part .info__part--para{
+    display: none;
     text-align: center;
     font-size: 18px;
     padding: 12px 10px;
@@ -48,11 +50,13 @@ header i {
 }
 
 .info__part--para.error{
+    display: block;
     background: #ff6961 ;
     color: #f8d7da;
     border: 1px solid #f5c6cb;
 }
 .info__part--para.pending{
+    display: block;
     background: #d1ecf1;
     color: #0c5460;
     border: 1px solid #bee5eb;
