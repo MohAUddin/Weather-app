@@ -41,9 +41,10 @@ header i {
 
 .info__part .info__part--para{
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     padding: 12px 10px;
     border-radius: 7px;
+    margin-bottom: 15px;
 }
 
 .info__part--para.error{
@@ -70,6 +71,10 @@ header i {
     text-align: center;
     border: 1px solid #bfbfbf;
 }
+
+.info__part input:is(:focus, :valid){
+    border: 2px solid #43affc;
+} 
 
 .info__part .seperator {
     height: 1px;
