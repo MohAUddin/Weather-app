@@ -162,3 +162,22 @@ header i {
     font-size: 40px;
 }
 
+.column {
+    border-left: 1px solid #bfbfbf;
+}
+    
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.details .temp .deg{
+    margin: 0;
+    font-size: 17px;
+    padding: 0 2px 0 1px;
+}
+
+.details p{
+    font-size: 14px;
+    margin-top: -6px;
+}
