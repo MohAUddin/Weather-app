@@ -140,9 +140,25 @@ header i {
 }
 
 .weather__part .bottom-details{
-    background-color: #ff6961;
+    /* background-color: #ff6961; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+    
 }
+
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.column i{
+    color: #43affc;
+    font-size: 40px;
+}
+
