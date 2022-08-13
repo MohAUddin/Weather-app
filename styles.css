@@ -29,15 +29,24 @@ body{
     border-bottom: 1px solid #bfbfbf;
 }
 
+.wrapper.active header {
+    font-size: 30px;
+    margin-left: 5px;
+
+}
+
 header i {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 00px;
     margin-right: 8px;
 }
 
 .wrapper .info__part {
-    display: none;
     margin: 20px 25px 30px;
+}
+
+.wrapper.active .info__part{
+    display: none;
 }
 
 .info__part .info__part--para{
@@ -102,10 +111,14 @@ header i {
 
 .wrapper .weather__part {
     margin: 30px 0 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.wrapper.active .weather__part{
+    display: flex;
 }
 
 .weather__part img {
