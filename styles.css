@@ -29,7 +29,7 @@ body{
     border-bottom: 1px solid #bfbfbf;
 }
 
-.wrapper.active header {
+.wrapper.active header i{
     font-size: 30px;
     margin-left: 5px;
 
