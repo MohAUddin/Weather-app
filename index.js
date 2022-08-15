@@ -49,6 +49,7 @@ function weatherDetails(info){
         infoTxt.innerText = `${inputField.value} isn't a valid city name`;
     }else{
         infoTxt.classList.remove("pending", "error");
+        wrapper.classList.add("active");
         console.log (info);
     }
 }
