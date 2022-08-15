@@ -12,7 +12,10 @@ inputField.addEventListener("keyup", e =>{
 
 function requestApi(city){
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
-    fetch(api).then(response => response.json()).then(result => weatherDetails(results));
+    fetch(api).then(response => response.json()).then(result => weatherDetails(result));
 } 
 
 
+function weatherDetails(info){
+    console.log (info);
+}
