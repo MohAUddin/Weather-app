@@ -2,6 +2,7 @@ const wrapper = document.querySelector(".wrapper"),
 inputPart = wrapper.querySelector(".info__part"),
 infoTxt = inputPart.querySelector(".info__part--para"),
 inputField = inputPart.querySelector("input");
+locationBtn = inputPart.querySelector("button");
 
 inputField.addEventListener("keyup", e =>{
     // if user pressed enter btn and input value is not empty
@@ -12,6 +13,8 @@ inputField.addEventListener("keyup", e =>{
 
 function requestApi(city){
     let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
+    infoTxt.innerText = "Getting weather details...";
+    infoTxt.classList.add("pending");
     fetch(api).then(response => response.json()).then(result => weatherDetails(result));
 } 
 
