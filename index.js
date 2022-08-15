@@ -56,17 +56,17 @@ function weatherDetails(info){
         const {feels_like, humidity, temp} = info.main;
 
         if(id == 800){
-            wIcon.src = "./assets/clear.svg";
+            wIcon.src = "/assets/clear.svg";
         }else if(id >= 200 && id <=232){
-            wIcon.src = "./assets/storm.svg";
-        }else if(id >= 600 && id <=232){
-            wIcon.src = "./assets/snow.svg";
-        }else if(id >= 701 && id <=232){
-            wIcon.src = "./assets/haze.svg";
-        }else if(id >= 801 && id <=232){
-            wIcon.src = "./assets/cloud.svg";
+            wIcon.src = "/assets/storm.svg";
+        }else if(id >= 600 && id <=622){
+            wIcon.src = "/assets/snow.svg";
+        }else if(id >= 701 && id <=781){
+            wIcon.src = "/assets/haze.svg";
+        }else if(id >= 801 && id <=804){
+            wIcon.src = "/assets/cloud.svg";
         }else if((id >= 300 && id <=321) || (id >= 500 && id <=531)){
-            wIcon.src = "./assets/rain.svg";
+            wIcon.src = "/assets/rain.svg";
         }
 
         wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
