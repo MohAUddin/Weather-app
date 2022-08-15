@@ -20,7 +20,8 @@ locationBtn.addEventListener("click", ()=>{
 });
 
 function onSuccess(postion){
-    console.log(postion);
+    const {latitude, longitude} = postion.coords
+    let api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
 }
 
 function onError(error){
