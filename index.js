@@ -1,8 +1,10 @@
 const wrapper = document.querySelector(".wrapper"),
 inputPart = wrapper.querySelector(".info__part"),
 infoTxt = inputPart.querySelector(".info__part--para"),
-inputField = inputPart.querySelector("input");
-locationBtn = inputPart.querySelector("button");
+inputField = inputPart.querySelector("input"),
+locationBtn = inputPart.querySelector("button"),
+wIcon = document.querySelector(".weather__part img");
+
 let api;
 
 inputField.addEventListener("keyup", e =>{
@@ -52,6 +54,20 @@ function weatherDetails(info){
         const country = info.sys.country;
         const {description, id } = info.weather[0];
         const {feels_like, humidity, temp} = info.main;
+
+        if(id == 800){
+            wIcon.src = "./assets/clear.svg";
+        }else if(id >= 200 && id <=232){
+            wIcon.src = "./assets/storm.svg";
+        }else if(id >= 600 && id <=232){
+            wIcon.src = "./assets/snow.svg";
+        }else if(id >= 701 && id <=232){
+            wIcon.src = "./assets/haze.svg";
+        }else if(id >= 801 && id <=232){
+            wIcon.src = "./assets/cloud.svg";
+        }else if((id >= 300 && id <=321) || (id >= 500 && id <=531)){
+            wIcon.src = "./assets/rain.svg";
+        }
 
         wrapper.querySelector(".temp .numb").innerText = Math.floor(temp);
         wrapper.querySelector(".weather").innerText = description;
