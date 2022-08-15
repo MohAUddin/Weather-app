@@ -48,8 +48,14 @@ function weatherDetails(info){
         infoTxt.classList.replace("pending", "error");
         infoTxt.innerText = `${inputField.value} isn't a valid city name`;
     }else{
+        const city = info.name;
+        const country = info.sys.country;
+        const {description, id, } = info.weather[0];
+        const {feels_like, humidity, temp} = info.main;
+
         infoTxt.classList.remove("pending", "error");
         wrapper.classList.add("active");
         console.log (info);
     }
 }
+
