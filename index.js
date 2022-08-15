@@ -3,6 +3,7 @@ inputPart = wrapper.querySelector(".info__part"),
 infoTxt = inputPart.querySelector(".info__part--para"),
 inputField = inputPart.querySelector("input");
 locationBtn = inputPart.querySelector("button");
+let api;
 
 inputField.addEventListener("keyup", e =>{
     // if user pressed enter btn and input value is not empty
