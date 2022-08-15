@@ -22,7 +22,7 @@ locationBtn.addEventListener("click", ()=>{
 
 function onSuccess(postion){
     const {latitude, longitude} = postion.coords
-    let api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
+    api =  `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
     fetchData();
 }
 
@@ -33,7 +33,7 @@ function onError(error){
 
 
 function requestApi(city){
-    let api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
+    api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=092a1ab4dbcdeb96d6d950158c5e6524`;
     fetchData();
 } 
 
@@ -44,5 +44,11 @@ function fetchData(){
 }
 
 function weatherDetails(info){
-    console.log (info);
+    if (info.cod == "404"){
+        infoTxt.classList.replace("pending", "error");
+        infoTxt.innerText = `${inputField.value} isn't a valid city name`;
+    }else{
+        infoTxt.classList.remove("pending", "error");
+        console.log (info);
+    }
 }
