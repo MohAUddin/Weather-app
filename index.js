@@ -3,7 +3,8 @@ inputPart = wrapper.querySelector(".info__part"),
 infoTxt = inputPart.querySelector(".info__part--para"),
 inputField = inputPart.querySelector("input"),
 locationBtn = inputPart.querySelector("button"),
-wIcon = document.querySelector(".weather__part img");
+wIcon = wrapper.querySelector(".weather__part img"),
+arrowBack = wrapper.querySelector("header i")
 
 let api;
 
@@ -77,7 +78,10 @@ function weatherDetails(info){
 
         infoTxt.classList.remove("pending", "error");
         wrapper.classList.add("active");
-        console.log (info);
+        
     }
 }
 
+arrowBack.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+});
